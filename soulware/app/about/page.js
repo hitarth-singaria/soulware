@@ -47,34 +47,6 @@ const About = () => {
     }
   ];
 
-  const team = [
-    {
-      name: "Krishna Jain",
-      role: "Creative & UI/UX Lead",
-      bio: "Crafter Who designs beautiful, intuitive interfaces and give creative direction for our platform.",
-      image: "👨‍🎨"
-    },
-    {
-      name: "Vansh",
-      role: "Frontend & Systems Architect",
-      bio: "Architect who design the core systems for our mental health support System and platform.",
-      image: "👨‍💻"
-    },
-    {
-      name: "Abhay",
-      role: "Backend & Infrastructure Lead",
-      bio: "Builds robust, scalable systems that ensure our platform is always available when you need it.",
-      image: "👨‍🔧"
-    },
-    {
-      name: "Piyush",
-      role: "Research & Learning Systems",
-      bio: "Researches and implements evidence-based approaches to mental health support and learning.",
-      image: "👨‍💻"
-    },
-    
-  ];
-
   const stats = [
     { number: "10+", label: "Students Helped", icon: Users },
     { number: "95%", label: "User Satisfaction", icon: Star },
@@ -311,51 +283,6 @@ const About = () => {
                   </div>
                   <div className="text-4xl font-bold text-gray-800 dark:text-white mb-2">{stat.number}</div>
                   <div className="text-gray-700 dark:text-gray-200 font-medium">{stat.label}</div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-20 px-6 bg-gradient-to-br from-sky-50 via-pink-50 to-purple-50 dark:from-slate-900 dark:via-purple-900 dark:to-indigo-900 transition-all duration-1000">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-6">
-              Meet Our Team
-            </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Passionate professionals dedicated to supporting your mental health journey.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {team.map((member, index) => (
-              <motion.div
-                key={member.name}
-                className="text-center group"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -8 }}
-              >
-                <div className="bg-white dark:bg-gray-700 rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 h-full">
-                  <div className="text-6xl mb-4">{member.image}</div>
-                  <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
-                    {member.name}
-                  </h3>
-                  <p className="text-blue-600 dark:text-blue-400 font-medium mb-4">{member.role}</p>
-                  <p className="text-gray-700 dark:text-gray-200 text-sm leading-relaxed">
-                    {member.bio}
-                  </p>
                 </div>
               </motion.div>
             ))}
